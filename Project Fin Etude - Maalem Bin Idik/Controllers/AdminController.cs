@@ -56,8 +56,16 @@ namespace Project_Fin_Etude___Maalem_Bin_Idik.Controllers
         {
             try
             {
-                SERVICE service = MyDB.SERVICE.FirstOrDefault(s => s.ID_service == id);
-                MyDB.SERVICE.Remove(service);
+                SERVICE service_enr = MyDB.SERVICE.Where(s => s.ID_service == id).FirstOrDefault();
+                List<COMMANDE_SERVICE> commandes = MyDB.COMMANDE_SERVICE.Where(c => c.SERVICE.ID_service == id).ToList();
+                if (commandes.Count != 0)
+                {
+                    foreach (COMMANDE_SERVICE commande in commandes)
+                    {
+                        MyDB.COMMANDE_SERVICE.Remove(commande);
+                    }
+                }
+                MyDB.SERVICE.Remove(service_enr);
                 MyDB.SaveChanges();
                 return RedirectToAction("ListeServices");
             }
