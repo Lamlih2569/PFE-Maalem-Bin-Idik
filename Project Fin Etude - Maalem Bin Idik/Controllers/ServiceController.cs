@@ -280,6 +280,14 @@ namespace Project_Fin_Etude___Maalem_Bin_Idik.Controllers
                 {
                     int id = int.Parse(Session["ServiceAsupprimer"].ToString());
                     SERVICE service = MyDB.SERVICE.FirstOrDefault(s => s.ID_service == id);
+                    List<COMMANDE_SERVICE> commandes = MyDB.COMMANDE_SERVICE.Where(c => c.SERVICE.ID_service == id).ToList();
+                    if (commandes.Count != 0)
+                    {
+                        foreach (COMMANDE_SERVICE commande in commandes)
+                        {
+                            MyDB.COMMANDE_SERVICE.Remove(commande);
+                        }
+                    }
                     MyDB.SERVICE.Remove(service);
                     MyDB.SaveChanges();
                     return RedirectToAction("ServicesParArtisan");
