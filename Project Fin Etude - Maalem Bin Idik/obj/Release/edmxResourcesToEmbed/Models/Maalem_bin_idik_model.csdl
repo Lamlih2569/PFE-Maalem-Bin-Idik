@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MAALEM_BIN_IDIK_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="UTILISATEUR">
+    <Key>
+      <PropertyRef Name="ID_utilisateur" />
+    </Key>
+    <Property Name="ID_utilisateur" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom_utilisateur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Prenom_utilisateur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateN_utilisateur" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Genre_utilisateur" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Tele_utilisateur" Type="Int32" />
+    <Property Name="Email_utilisateur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mdp_utilisateur" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email_verifier" Type="Boolean" />
+    <NavigationProperty Name="COMMANDE_SERVICE" Relationship="MAALEM_BIN_IDIK_DBModel.FK2_Table_Commande" FromRole="UTILISATEUR" ToRole="COMMANDE_SERVICE" />
+    <Property Name="Utilisateur_Banni" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="MAALEM_BIN_IDIK_DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" />
+    <EntitySet Name="ARTISAN" EntityType="MAALEM_BIN_IDIK_DBModel.ARTISAN" />
+    <EntitySet Name="METIER" EntityType="MAALEM_BIN_IDIK_DBModel.METIER" />
+    <EntitySet Name="SERVICE" EntityType="MAALEM_BIN_IDIK_DBModel.SERVICE" />
+    <AssociationSet Name="FK2_Table_Services" Association="MAALEM_BIN_IDIK_DBModel.FK2_Table_Services">
+      <End Role="ARTISAN" EntitySet="ARTISAN" />
+      <End Role="SERVICE" EntitySet="SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK1_Table_Services" Association="MAALEM_BIN_IDIK_DBModel.FK1_Table_Services">
+      <End Role="METIER" EntitySet="METIER" />
+      <End Role="SERVICE" EntitySet="SERVICE" />
+    </AssociationSet>
+    <EntitySet Name="COMMANDE_SERVICE" EntityType="MAALEM_BIN_IDIK_DBModel.COMMANDE_SERVICE" />
+    <AssociationSet Name="FK1_Table_Commande" Association="MAALEM_BIN_IDIK_DBModel.FK1_Table_Commande">
+      <End Role="SERVICE" EntitySet="SERVICE" />
+      <End Role="COMMANDE_SERVICE" EntitySet="COMMANDE_SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK2_Table_Commande" Association="MAALEM_BIN_IDIK_DBModel.FK2_Table_Commande">
+      <End Role="UTILISATEUR" EntitySet="UTILISATEUR" />
+      <End Role="COMMANDE_SERVICE" EntitySet="COMMANDE_SERVICE" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ARTISAN">
+    <Key>
+      <PropertyRef Name="ID_artisan" />
+    </Key>
+    <Property Name="ID_artisan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom_artisan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Prenom_artisan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateN_artisan" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Genre_artisan" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Tele_artisan" Type="Int32" />
+    <Property Name="Email_artisan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mdp_artisan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email_verifier" Type="Boolean" />
+    <NavigationProperty Name="SERVICE" Relationship="MAALEM_BIN_IDIK_DBModel.FK2_Table_Services" FromRole="ARTISAN" ToRole="SERVICE" />
+    <Property Name="Artisan_Banni" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="METIER">
+    <Key>
+      <PropertyRef Name="ID_metier" />
+    </Key>
+    <Property Name="ID_metier" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom_metier" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SERVICE" Relationship="MAALEM_BIN_IDIK_DBModel.FK1_Table_Services" FromRole="METIER" ToRole="SERVICE" />
+  </EntityType>
+  <EntityType Name="SERVICE">
+    <Key>
+      <PropertyRef Name="ID_service" />
+    </Key>
+    <Property Name="ID_service" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titre_service" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description_service" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ID_metier" Type="Int32" Nullable="false" />
+    <Property Name="ID_artisan" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ARTISAN" Relationship="MAALEM_BIN_IDIK_DBModel.FK2_Table_Services" FromRole="SERVICE" ToRole="ARTISAN" />
+    <NavigationProperty Name="METIER" Relationship="MAALEM_BIN_IDIK_DBModel.FK1_Table_Services" FromRole="SERVICE" ToRole="METIER" />
+    <Property Name="Ville_service" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="COMMANDE_SERVICE" Relationship="MAALEM_BIN_IDIK_DBModel.FK1_Table_Commande" FromRole="SERVICE" ToRole="COMMANDE_SERVICE" />
+  </EntityType>
+  <Association Name="FK2_Table_Services">
+    <End Type="MAALEM_BIN_IDIK_DBModel.ARTISAN" Role="ARTISAN" Multiplicity="1" />
+    <End Type="MAALEM_BIN_IDIK_DBModel.SERVICE" Role="SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ARTISAN">
+        <PropertyRef Name="ID_artisan" />
+      </Principal>
+      <Dependent Role="SERVICE">
+        <PropertyRef Name="ID_artisan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK1_Table_Services">
+    <End Type="MAALEM_BIN_IDIK_DBModel.METIER" Role="METIER" Multiplicity="1" />
+    <End Type="MAALEM_BIN_IDIK_DBModel.SERVICE" Role="SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="METIER">
+        <PropertyRef Name="ID_metier" />
+      </Principal>
+      <Dependent Role="SERVICE">
+        <PropertyRef Name="ID_metier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="COMMANDE_SERVICE">
+    <Key>
+      <PropertyRef Name="ID_commande" />
+    </Key>
+    <Property Name="ID_commande" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateDePrise" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ID_service" Type="Int32" Nullable="false" />
+    <Property Name="ID_utilisateur" Type="Int32" Nullable="false" />
+    <Property Name="Prix_service" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="SERVICE" Relationship="MAALEM_BIN_IDIK_DBModel.FK1_Table_Commande" FromRole="COMMANDE_SERVICE" ToRole="SERVICE" />
+    <NavigationProperty Name="UTILISATEUR" Relationship="MAALEM_BIN_IDIK_DBModel.FK2_Table_Commande" FromRole="COMMANDE_SERVICE" ToRole="UTILISATEUR" />
+  </EntityType>
+  <Association Name="FK1_Table_Commande">
+    <End Type="MAALEM_BIN_IDIK_DBModel.SERVICE" Role="SERVICE" Multiplicity="1" />
+    <End Type="MAALEM_BIN_IDIK_DBModel.COMMANDE_SERVICE" Role="COMMANDE_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICE">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="COMMANDE_SERVICE">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK2_Table_Commande">
+    <End Type="MAALEM_BIN_IDIK_DBModel.UTILISATEUR" Role="UTILISATEUR" Multiplicity="1" />
+    <End Type="MAALEM_BIN_IDIK_DBModel.COMMANDE_SERVICE" Role="COMMANDE_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UTILISATEUR">
+        <PropertyRef Name="ID_utilisateur" />
+      </Principal>
+      <Dependent Role="COMMANDE_SERVICE">
+        <PropertyRef Name="ID_utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

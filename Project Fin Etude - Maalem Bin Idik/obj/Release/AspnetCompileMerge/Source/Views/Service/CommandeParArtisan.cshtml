@@ -1,0 +1,96 @@
+﻿@model List<Project_Fin_Etude___Maalem_Bin_Idik.Models.COMMANDE_SERVICE>
+@{
+    ViewBag.Title = "CommandeParArtisan";
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+        <div>
+            <a href="@Url.Action("Index","Home")" class="nav__logo">
+                <img src="~/Content/Services_Content/images/lm3alam wha.svg" class="nav__logo-img">
+                <span class="nav__logo-name">Maalem Bin Idik</span>
+            </a>
+
+            <div class="nav__list">
+                <a href="@Url.Action("Index","Profile")" class="nav__link">
+                    <i class='bx bx-grid-alt nav__icon'></i>
+                    <span class="nav__name">Acceuil</span>
+                </a>
+
+                <a href="@Url.Action("Settings","Profile")" class="nav__link">
+                    <i class='bx bx-user nav__icon'></i>
+                    <span class="nav__name">Infos personnelles</span>
+                </a>
+
+                <a href="@Url.Action("AjouterService","Service")" class="nav__link">
+                    <i class='bx bx-message-square-add nav__icon'></i>
+                    <span class="nav__name">Ajouter un service</span>
+                </a>
+
+                <a href="@Url.Action("ServicesParArtisan","Service")" class="nav__link">
+                    <i class='bx bx-list-ul nav__icon'></i>
+                    <span class="nav__name">Liste services</span>
+                </a>
+
+                <a href="@Url.Action("CommandeParArtisan","Service")" class="nav__link">
+                    <i class='bx bx-message-square-detail nav__icon'></i>
+                    <span class="nav__name active">Commandes <span class="badge bg-warning text-dark">@(Session["nbCommande"])</span></span>
+                </a>
+            </div>
+        </div>
+
+        <a href="@Url.Action("LogOut","Login")" class="nav__link">
+            <i class='bx bx-log-out nav__icon'></i>
+            <span class="nav__name">Se deconnecter</span>
+        </a>
+    </nav>
+</div>
+<form>
+    <div class="container body-content">
+        <h3>Liste de vos commandes a finaliser</h3>
+        <hr>
+        @if (Model.Count == 0)
+        {
+            <h4>Aucune commande trouvée !</h4>
+        }
+        else
+        {
+            <table class="table" style="margin-top: 50px;">
+                <thead style="color: white; background-color: black;">
+                    <tr>
+                        <th scope="col">Date De Prise</th>
+                        <th scope="col">Service</th>
+                        <th scope="col">Utilisateur</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var commande in Model)
+                    {
+                        <tr>
+                            <th scope="row">@commande.DateDePrise.ToShortDateString()</th>
+                            <td>@commande.SERVICE.Titre_service</td>
+                            <td>@commande.UTILISATEUR.Nom_utilisateur @commande.UTILISATEUR.Prenom_utilisateur</td>
+                            <td>
+                                <a href="@Url.Action("FinaliserCommande","Service", new { id = commande.ID_commande })" class="btn btn-warning">Finaliser</a>
+                                <a id="annulerCommande" href="@Url.Action("AnnulerCommande","Service", new { id = commande.ID_commande })" class="btn btn-danger">Annuler</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</form>
+<script>
+    var buttonAnnuler = document.getElementById("annulerCommande");
+    buttonAnnuler.addEventListener("click", function (e) {
+        var result = confirm("Vous ete sure d'annuler cette commande ?");
+        if (result == false) {
+            e.preventDefault();
+        }
+    });
+</script>
+
+

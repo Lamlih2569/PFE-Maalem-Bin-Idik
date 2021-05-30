@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+<div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+        <div>
+            <a href="@Url.Action("Index","Home")" class="nav__logo">
+                <img src="~/Content/Profile_Content/img/lm3lam wai.png" class="nav__logo-img">
+                <span class="nav__logo-name">Maalem Bin Idik</span>
+            </a>
+
+            <div class="nav__list">
+                <a href="@Url.Action("Index","Profile")" class="nav__link">
+                    <i class='bx bx-grid-alt nav__icon'></i>
+                    <span class="nav__name active">Acceuil</span>
+                </a>
+
+                <a href="@Url.Action("Settings","Profile")" class="nav__link">
+                    <i class='bx bx-user nav__icon'></i>
+                    <span class="nav__name">Infos personnelles</span>
+                </a>
+
+                <a href="@Url.Action("AjouterService","Service")" class="nav__link">
+                    <i class='bx bx-message-square-add nav__icon'></i>
+                    <span class="nav__name">Ajouter un service</span>
+                </a>
+
+                <a href="@Url.Action("ServicesParArtisan","Service")" class="nav__link">
+                    <i class='bx bx-list-ul nav__icon'></i>
+                    <span class="nav__name">Liste services</span>
+                </a>
+
+                <a href="@Url.Action("CommandeParArtisan","Service")" class="nav__link">
+                    <i class='bx bx-message-square-detail nav__icon'></i>
+                    <span class="nav__name">Commandes <span class="badge bg-warning text-dark">@(Session["nbCommande"])</span></span>
+                </a>
+            </div>
+        </div>
+
+        <a href="@Url.Action("LogOut","Login")" class="nav__link">
+            <i class='bx bx-log-out nav__icon'></i>
+            <span class="nav__name">Se deconnecter</span>
+        </a>
+    </nav>
+</div>
+
+<div class="container body-content">
+    <h3>Bienvenue M. <strong>@(Session["Nom"] + " " + Session["Prenom"])</strong></h3>
+    <hr>
+    <div class="row card-container">
+        <div class="col-md-6 left-card">
+            <div class="card">
+                <img src="~/Content/Profile_Content/img/illustration3.svg" alt="">
+                <div class="card-body">
+                    @if (ViewBag.nbServiceEffectuer != 0)
+                    {
+                        <h3>@ViewBag.nbServiceEffectuer</h3>
+                    }
+                    else
+                    {
+                        <h3>0</h3>
+                    }
+                    <p>Total des travaux effectué</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Content/Profile_Content/img/illustration2.svg" alt="">
+                <div class="card-body">
+                    @if (ViewBag.totalRevenue != null)
+                    {
+                        <h3>@String.Format("{0:0.00} DH", ViewBag.totalRevenue)</h3>
+                    }
+                    else
+                    {
+                        <h3> 0 DH</h3>
+                    }
+                    <p>Total des revenues</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 right-card">
+            <div class="card">
+                <img src="~/Content/Profile_Content/img/illustration1.svg" alt="">
+                <div class="card-body">
+                    @if (ViewBag.nbServicePoster != 0)
+                    {
+                        <h3>@ViewBag.nbServicePoster</h3>
+                    }
+                    else
+                    {
+                        <h3>0</h3>
+                    }
+                    <p>Total des services posté</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

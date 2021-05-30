@@ -1,0 +1,26 @@
+﻿@if (Session["email"] == null)
+{
+    <li>
+        <a style="font-size: 14px !important" class="nav-link" aria-current="page" href="@Url.Action("Index", "Login")"><strong>Se connecter</strong></a>
+    </li>
+}
+else {
+    <li class="nav-item dropdown">
+        <a style="font-size: 14px !important" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user" style="padding:0px 10px"></i><strong>Bienvenue @(Session["Nom"] + " " + Session["Prenom"])</strong>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            @if (Session["UserType"].ToString() == "utilisateur")
+            {
+                <li><a class="dropdown-item" href="@Url.Action("Settings", "Profile")">Mon compte</a></li>
+            }
+            else
+            {
+                <li><a class="dropdown-item" href="@Url.Action("Index", "Profile")">Mon compte</a></li>
+            }
+            <li><a class="dropdown-item" href="@Url.Action("ToutServices","Service")">Liste des services</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/Login/LogOut">Deconnecter</a></li>
+        </ul>
+    </li>
+}

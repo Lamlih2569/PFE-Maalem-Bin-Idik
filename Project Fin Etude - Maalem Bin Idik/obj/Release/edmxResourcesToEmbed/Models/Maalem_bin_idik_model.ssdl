@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MAALEM_BIN_IDIK_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ARTISAN">
+    <Key>
+      <PropertyRef Name="ID_artisan" />
+    </Key>
+    <Property Name="ID_artisan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom_artisan" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prenom_artisan" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateN_artisan" Type="date" Nullable="false" />
+    <Property Name="Genre_artisan" Type="varchar" MaxLength="5" />
+    <Property Name="Tele_artisan" Type="int" />
+    <Property Name="Email_artisan" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mdp_artisan" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email_verifier" Type="bit" />
+    <Property Name="Artisan_Banni" Type="bit" />
+  </EntityType>
+  <EntityType Name="COMMANDE_SERVICE">
+    <Key>
+      <PropertyRef Name="ID_commande" />
+    </Key>
+    <Property Name="ID_commande" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateDePrise" Type="date" Nullable="false" />
+    <Property Name="ID_service" Type="int" Nullable="false" />
+    <Property Name="ID_utilisateur" Type="int" Nullable="false" />
+    <Property Name="Prix_service" Type="money" />
+  </EntityType>
+  <EntityType Name="METIER">
+    <Key>
+      <PropertyRef Name="ID_metier" />
+    </Key>
+    <Property Name="ID_metier" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom_metier" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SERVICE">
+    <Key>
+      <PropertyRef Name="ID_service" />
+    </Key>
+    <Property Name="ID_service" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titre_service" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description_service" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Ville_service" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_metier" Type="int" Nullable="false" />
+    <Property Name="ID_artisan" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UTILISATEUR">
+    <Key>
+      <PropertyRef Name="ID_utilisateur" />
+    </Key>
+    <Property Name="ID_utilisateur" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom_utilisateur" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prenom_utilisateur" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateN_utilisateur" Type="date" Nullable="false" />
+    <Property Name="Genre_utilisateur" Type="varchar" MaxLength="5" />
+    <Property Name="Tele_utilisateur" Type="int" />
+    <Property Name="Email_utilisateur" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Mdp_utilisateur" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email_verifier" Type="bit" />
+    <Property Name="Utilisateur_Banni" Type="bit" />
+  </EntityType>
+  <Association Name="FK1_Table_Commande">
+    <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="1" />
+    <End Role="COMMANDE_SERVICE" Type="Self.COMMANDE_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVICE">
+        <PropertyRef Name="ID_service" />
+      </Principal>
+      <Dependent Role="COMMANDE_SERVICE">
+        <PropertyRef Name="ID_service" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK1_Table_Services">
+    <End Role="METIER" Type="Self.METIER" Multiplicity="1" />
+    <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="METIER">
+        <PropertyRef Name="ID_metier" />
+      </Principal>
+      <Dependent Role="SERVICE">
+        <PropertyRef Name="ID_metier" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK2_Table_Commande">
+    <End Role="UTILISATEUR" Type="Self.UTILISATEUR" Multiplicity="1" />
+    <End Role="COMMANDE_SERVICE" Type="Self.COMMANDE_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UTILISATEUR">
+        <PropertyRef Name="ID_utilisateur" />
+      </Principal>
+      <Dependent Role="COMMANDE_SERVICE">
+        <PropertyRef Name="ID_utilisateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK2_Table_Services">
+    <End Role="ARTISAN" Type="Self.ARTISAN" Multiplicity="1" />
+    <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ARTISAN">
+        <PropertyRef Name="ID_artisan" />
+      </Principal>
+      <Dependent Role="SERVICE">
+        <PropertyRef Name="ID_artisan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MAALEM_BIN_IDIK_DBModelStoreContainer">
+    <EntitySet Name="ARTISAN" EntityType="Self.ARTISAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMMANDE_SERVICE" EntityType="Self.COMMANDE_SERVICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="METIER" EntityType="Self.METIER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SERVICE" EntityType="Self.SERVICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UTILISATEUR" EntityType="Self.UTILISATEUR" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK1_Table_Commande" Association="Self.FK1_Table_Commande">
+      <End Role="SERVICE" EntitySet="SERVICE" />
+      <End Role="COMMANDE_SERVICE" EntitySet="COMMANDE_SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK1_Table_Services" Association="Self.FK1_Table_Services">
+      <End Role="METIER" EntitySet="METIER" />
+      <End Role="SERVICE" EntitySet="SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK2_Table_Commande" Association="Self.FK2_Table_Commande">
+      <End Role="UTILISATEUR" EntitySet="UTILISATEUR" />
+      <End Role="COMMANDE_SERVICE" EntitySet="COMMANDE_SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK2_Table_Services" Association="Self.FK2_Table_Services">
+      <End Role="ARTISAN" EntitySet="ARTISAN" />
+      <End Role="SERVICE" EntitySet="SERVICE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

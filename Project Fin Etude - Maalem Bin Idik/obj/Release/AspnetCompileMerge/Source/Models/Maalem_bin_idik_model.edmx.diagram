@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b20ebb2ce77440c396847190b6b0eb8e" Name="Diagram1">
+        <EntityTypeShape EntityType="MAALEM_BIN_IDIK_DBModel.UTILISATEUR" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MAALEM_BIN_IDIK_DBModel.ARTISAN" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MAALEM_BIN_IDIK_DBModel.METIER" Width="1.5" PointX="3.375" PointY="5.375" />
+        <EntityTypeShape EntityType="MAALEM_BIN_IDIK_DBModel.SERVICE" Width="1.5" PointX="5.625" PointY="1" />
+        <AssociationConnector Association="MAALEM_BIN_IDIK_DBModel.FK2_Table_Services" />
+        <AssociationConnector Association="MAALEM_BIN_IDIK_DBModel.FK1_Table_Services" />
+        <EntityTypeShape EntityType="MAALEM_BIN_IDIK_DBModel.COMMANDE_SERVICE" Width="1.5" PointX="7.875" PointY="1.125" />
+        <AssociationConnector Association="MAALEM_BIN_IDIK_DBModel.FK1_Table_Commande" />
+        <AssociationConnector Association="MAALEM_BIN_IDIK_DBModel.FK2_Table_Commande" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

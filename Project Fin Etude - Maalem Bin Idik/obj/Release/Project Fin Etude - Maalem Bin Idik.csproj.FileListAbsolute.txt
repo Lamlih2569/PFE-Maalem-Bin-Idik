@@ -1,0 +1,80 @@
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\Project Fin Etude - Maalem Bin Idik.dll.config
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\Project Fin Etude - Maalem Bin Idik.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\Project Fin Etude - Maalem Bin Idik.pdb
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\csc.exe
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\csc.exe.config
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\csc.rsp
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\csi.exe
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\csi.exe.config
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\csi.rsp
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.AppContext.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Console.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.IO.Compression.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.IO.Pipes.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Security.Claims.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.ValueTuple.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Xml.XPath.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\vbc.exe
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\vbc.exe.config
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\vbc.rsp
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\VBCSCompiler.exe
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\EntityFramework.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\EntityFramework.SqlServer.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Helpers.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Mvc.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Razor.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Webpages.Deployment.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Webpages.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Webpages.Razor.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\EntityFramework.xml
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\EntityFramework.SqlServer.xml
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Razor.xml
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Webpages.xml
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Webpages.Deployment.xml
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Webpages.Razor.xml
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Helpers.xml
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\System.Web.Mvc.xml
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\fr\EntityFramework.resources.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\fr\System.Web.Razor.resources.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\fr\System.Web.Webpages.resources.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\fr\System.Web.Webpages.Deployment.resources.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\fr\System.Web.Webpages.Razor.resources.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\fr\System.Web.Helpers.resources.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\bin\fr\System.Web.Mvc.resources.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\obj\Release\Project Fin Etude - Maalem Bin Idik.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\obj\Release\Project Fin Etude - Maalem Bin Idik.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\obj\Release\Project Fin Etude - Maalem Bin Idik.csproj.CopyComplete
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\obj\Release\Project Fin Etude - Maalem Bin Idik.dll
+C:\Users\hp\source\repos\Project Fin Etude - Maalem Bin Idik\Project Fin Etude - Maalem Bin Idik\obj\Release\Project Fin Etude - Maalem Bin Idik.pdb

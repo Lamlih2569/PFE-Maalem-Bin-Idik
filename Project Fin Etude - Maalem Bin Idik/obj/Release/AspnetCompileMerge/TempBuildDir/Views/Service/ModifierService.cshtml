@@ -1,0 +1,124 @@
+﻿@model Project_Fin_Etude___Maalem_Bin_Idik.Models.SERVICE
+@{
+    ViewBag.Title = "ModifierService";
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+        <div>
+            <a href="@Url.Action("Index","Home")" class="nav__logo">
+                <img src="~/Content/Services_Content/Add_Service/img/lm3lam wai.png" class="nav__logo-img">
+                <span class="nav__logo-name">Maalem Bin Idik</span>
+            </a>
+
+            <div class="nav__list">
+                <a href="@Url.Action("Index","Profile")" class="nav__link">
+                    <i class='bx bx-grid-alt nav__icon'></i>
+                    <span class="nav__name">Acceuil</span>
+                </a>
+
+                <a href="@Url.Action("Settings","Profile")" class="nav__link">
+                    <i class='bx bx-user nav__icon'></i>
+                    <span class="nav__name">Infos personnelles</span>
+                </a>
+
+                <a href="@Url.Action("AjouterService","Service")" class="nav__link">
+                    <i class='bx bx-message-square-add nav__icon'></i>
+                    <span class="nav__name">Ajouter un service</span>
+                </a>
+
+                <a href="@Url.Action("ServicesParArtisan","Service")" class="nav__link">
+                    <i class='bx bx-list-ul nav__icon'></i>
+                    <span class="nav__name active">Liste services</span>
+                </a>
+
+                <a href="@Url.Action("CommandeParArtisan","Service")" class="nav__link">
+                    <i class='bx bx-message-square-detail nav__icon'></i>
+                    <span class="nav__name">Commandes <span class="badge bg-warning text-dark">@(Session["nbCommande"])</span></span>
+                </a>
+            </div>
+        </div>
+
+        <a href="@Url.Action("LogOut","Login")" class="nav__link">
+            <i class='bx bx-log-out nav__icon'></i>
+            <span class="nav__name">Se deconnecter</span>
+        </a>
+    </nav>
+</div>
+@using (Html.BeginForm("ModifierService", "Service", FormMethod.Post))
+{
+    <div class="container body-content">
+        <h3>Modifier un service</h3>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="Nom" class="form-label">Titre du service :</label>
+                <input type="text" class="form-control" value="@Model.Titre_service" name="Titre_service" required>
+            </div>
+            <div class="col-md-6">
+                <label for="Prenom" class="form-label">Description :</label>
+                <input type="text" class="form-control" value="@Model.Description_service" name="Description_service" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="DateNaissance" class="form-label">Ville du service :</label>
+                <select id="mySelect" class="form-select" aria-label="Default select example" name="Ville_service">
+                    <option>Casablanca</option>
+                    <option>Fés</option>
+                    <option>Tanger</option>
+                    <option>Marrakech</option>
+                    <option>Salé</option>
+                    <option>Meknès</option>
+                    <option>Rabat</option>
+                    <option>Oujda</option>
+                    <option>Kénitra</option>
+                    <option>Agadir</option>
+                    <option>Tétouan</option>
+                    <option>Témara</option>
+                    <option>Safi</option>
+                    <option>Mohammédia</option>
+                    <option>Khouribga</option>
+                    <option>El Jadida</option>
+                    <option>Béni Mellal</option>
+                    <option>Nador</option>
+                    <option>Taza</option>
+                    <option>Khémisset</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="Genre" class="form-label">Metier :</label>
+                <select class="form-select" aria-label="Default select example" value="@Model.METIER.Nom_metier" name="ID_metier">
+                    @foreach (var m in ViewBag.listMetier)
+                    {
+                        if (Model.ID_metier == m.ID_metier)
+                        {
+                            <option value="@m.ID_metier" selected>@m.Nom_metier</option>
+                        }
+                        else
+                        {
+                            <option value="@m.ID_metier">@m.Nom_metier</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-success">Modifier</button>
+                <a href="@Url.Action("ServicesParArtisan","Service")" class="btn btn-secondary">Annuler</a>
+            </div>
+        </div>
+    </div>
+}
+<script>
+    var x = document.getElementById("mySelect");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        if ("@Model.Ville_service" == x.options[i].text) {
+            document.getElementById("mySelect").selectedIndex = i;
+        }
+    }
+</script>

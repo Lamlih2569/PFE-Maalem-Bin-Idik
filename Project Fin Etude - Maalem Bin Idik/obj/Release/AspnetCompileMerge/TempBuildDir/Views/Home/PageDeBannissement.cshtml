@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Page De Bannissement/style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Page de bannissement | Maalem Bin Idik</title>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container content">
+        <div class="content-header">
+            <img src="~/Content/Page De Bannissement/lm3lam black.svg" />
+            <img src="~/Content/Page De Bannissement/Banned.png" />
+        </div>
+        <h3>Votre compte a été banni</h3>
+        <p>L'un des administrateur on banni votre compte car vous n'avez pas respecter les conditions générales d'utilisation</p>
+        <p>Pour plus d'informations veuillez contacter <b>contact.maalem.bin.idik@gmail.com</b></p>
+        <a href="@Url.Action("LogOut","Login")" class="btn btn-warning">Se déconnecter</a>
+    </div>
+    <div class="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #fff;
+}
+.navbar-dark{
+    background: #262626;
+}
+.navbar-brand img{
+    width: 50px;
+    height: 50px;
+    padding-bottom: 13px;
+    transform: scale(1.3);
+}
+.navbar-brand{
+    width: 40px;
+    height: 40px;
+}
+.nav-link{
+    font-size: 14px !important;
+}
+
+#Header{
+    width: 100%;
+    height: 60vh;
+    background: url(./Images/homeback.svg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Header h3{
+    color: #ddd;
+    font-weight: 600;
+}
+#Header h3 span{
+    display: block;
+    font-weight: 800;
+    font-size: 2.5em;
+    color: white
+}
+#Header p{
+    color: #ddd;
+    margin:0px;
+}
+#About{
+    background: #fff;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#About h3{
+    font-weight: 700;
+}
+#About h4{
+    font-weight: 700;
+    font-size: 1.2em;
+    margin: 20px;
+}
+#About p{
+    text-align: justify;
+    font-size: 15px;
+}
+.ligne-black{
+    display: inline-block;
+    height: 5px !important;
+    width: 100px;
+    background: #262626;
+    border-radius: 10px;
+}
+.ligne-white{
+    display: inline-block;
+    height: 5px !important;
+    width: 100px;
+    background: #fff;
+    border-radius: 10px;
+}
+#About i{
+    border-radius: 50%;
+    font-size: 2em;
+    background :#262626;
+    padding: 20px;
+    color: white;
+}
+#FAQ {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #262626;
+}
+#FAQ h3{
+    color: white;
+    font-weight: 700;
+}
+#FAQ .btn-link {
+    font-weight: 500;
+    color: #2c3e50;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.hide{
+    display: none;
+}
+#FAQ .card{
+    margin: 20px;
+}
+#FAQ .image-container{
+    overflow: hidden;
+}
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 0%);
+}
+
+#Categorie{
+    background-color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.carousel-item{
+    padding-top: 50px;
+    height: 32rem;
+    background-color: #262626;
+}
+#Rates{
+    padding-top: 100px;
+}
+#Rates h3{
+    color: white;
+}
+#Rates p{
+    color: #ddd;
+}
+#Rates .rate-text{
+    font-size: 15px;
+    width: 60%;
+}
+#Rates .rating i:nth-child(1),
+#Rates .rating i:nth-child(2),
+#Rates .rating i:nth-child(3),
+#Rates .rating i:nth-child(4){
+    color: goldenrod;
+}
+#Rates .rating i:nth-child(5){
+    color:grey;
+}
+#Rates img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+#Rates .rate-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Footer{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background: black;
+    color: white;
+}
+#Footer h3{
+    font-weight: 700;
+    font-size: 1.5em;
+}
+#Footer p, li, span{
+    font-size: 14px;
+}
+#Footer a{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    transition: all 0.3s;
+}
+#Footer a:hover{
+    color: #FAD009;
+}

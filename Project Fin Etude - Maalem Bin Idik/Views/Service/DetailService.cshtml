@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="~/Content/Services_Content/Details_Service/images/lm3alam wha.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Services_Content/Details_Service/style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Detailles de service | Maalem Bin Idik</title>
+</head>
+<body>
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="~/Content/Services_Content/Details_Service/images/lm3alam wha.svg" alt="">
+            </div>
+            <h4>Maalem Bin Idik | Detailles de service</h4>
+        </div>
+    </nav>
+
+    <div class="details">
+        <div class="row">
+            <div class="col-md-6 left">
+                <img src="~/Content/Services_Content/Details_Service/images/lm3lam black.svg" alt="">
+            </div>
+            <div class="col-md-6 right">
+                <div class="content">
+                    <h3>@(Session["TitreService"].ToString())</h3>
+                    <hr>
+                    <p><span>Déscription :</span> @(Session["DescriptionService"].ToString())</p>
+                    <p><span>Ville :</span> @(Session["VilleService"].ToString())</p>
+                    <p><span>Metier :</span> @(Session["MetierService"].ToString())</p>
+                    <p><span>Artisan :</span> @(Session["ArtisanService"].ToString())</p>
+                    <div class="buttons">
+                        <a id="commander" class="btn btn-warning">Choisir</a>
+                        <a href="@Url.Action("ToutServices","Service")" class="btn btn-secondary">Annuler</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("commander").addEventListener("click", function () {
+            var result = confirm("Vous être sûr de passer cette commande ?");
+            if (result == true) {
+                window.location.href = "/Service/PasserCommande";
+            }
+        });        
+    </script>
+</body>
+</html>

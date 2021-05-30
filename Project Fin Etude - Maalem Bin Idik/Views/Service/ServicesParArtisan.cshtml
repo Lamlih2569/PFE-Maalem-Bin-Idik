@@ -1,0 +1,87 @@
+﻿@model List<Project_Fin_Etude___Maalem_Bin_Idik.Models.SERVICE>
+@{
+    ViewBag.Title = "ServicesParArtisan";
+    Layout = "~/Views/Shared/_ProfileLayout.cshtml";
+}
+
+<div class="l-navbar" id="nav-bar">
+    <nav class="nav">
+        <div>
+            <a href="@Url.Action("Index","Home")" class="nav__logo">
+                <img src="~/Content/Services_Content/images/lm3alam wha.svg" class="nav__logo-img">
+                <span class="nav__logo-name">Maalem Bin Idik</span>
+            </a>
+
+            <div class="nav__list">
+                <a href="@Url.Action("Index","Profile")" class="nav__link">
+                    <i class='bx bx-grid-alt nav__icon'></i>
+                    <span class="nav__name">Acceuil</span>
+                </a>
+
+                <a href="@Url.Action("Settings","Profile")" class="nav__link">
+                    <i class='bx bx-user nav__icon'></i>
+                    <span class="nav__name">Infos personnelles</span>
+                </a>
+
+                <a href="@Url.Action("AjouterService","Service")" class="nav__link">
+                    <i class='bx bx-message-square-add nav__icon'></i>
+                    <span class="nav__name">Ajouter un service</span>
+                </a>
+
+                <a href="@Url.Action("ServicesParArtisan","Service")" class="nav__link">
+                    <i class='bx bx-list-ul nav__icon'></i>
+                    <span class="nav__name active">Liste services</span>
+                </a>
+
+                <a href="@Url.Action("CommandeParArtisan","Service")" class="nav__link">
+                    <i class='bx bx-message-square-detail nav__icon'></i>
+                    <span class="nav__name">Commandes <span class="badge bg-warning text-dark">@(Session["nbCommande"])</span></span>
+                </a>
+            </div>
+        </div>
+
+        <a href="@Url.Action("LogOut","Login")" class="nav__link">
+            <i class='bx bx-log-out nav__icon'></i>
+            <span class="nav__name">Se deconnecter</span>
+        </a>
+    </nav>
+</div>
+<form>
+    <div class="container body-content">
+        <h3>Liste de vos services</h3>
+        <hr>
+        @if (Model.Count == 0)
+        {
+            <h4>Aucun service trouvée !</h4>
+        }
+        else
+        {
+            <table class="table" style="margin-top: 50px;">
+                <thead style="color: white; background-color: black;">
+                    <tr>
+                        <th scope="col">Titre</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Ville</th>
+                        <th scope="col">Metier</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var service in Model)
+                    {
+                        <tr>
+                            <th scope="row">@service.Titre_service</th>
+                            <td>@service.Description_service</td>
+                            <td>@service.Ville_service</td>
+                            <td>@service.METIER.Nom_metier</td>
+                            <td>
+                                <a href="@Url.Action("ModifierService","Service", new { id = service.ID_service })" class="btn btn-warning">Modifier</a>
+                                <a href="@Url.Action("SupprimerService","Service", new { id = service.ID_service })" class="btn btn-danger">Supprimer</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</form>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MAALEM_BIN_IDIK_DBModelStoreContainer" CdmEntityContainer="MAALEM_BIN_IDIK_DBEntities">
+    <EntitySetMapping Name="UTILISATEUR">
+      <EntityTypeMapping TypeName="MAALEM_BIN_IDIK_DBModel.UTILISATEUR">
+        <MappingFragment StoreEntitySet="UTILISATEUR">
+          <ScalarProperty Name="Utilisateur_Banni" ColumnName="Utilisateur_Banni" />
+          <ScalarProperty Name="Email_verifier" ColumnName="Email_verifier" />
+          <ScalarProperty Name="ID_utilisateur" ColumnName="ID_utilisateur" />
+          <ScalarProperty Name="Nom_utilisateur" ColumnName="Nom_utilisateur" />
+          <ScalarProperty Name="Prenom_utilisateur" ColumnName="Prenom_utilisateur" />
+          <ScalarProperty Name="DateN_utilisateur" ColumnName="DateN_utilisateur" />
+          <ScalarProperty Name="Genre_utilisateur" ColumnName="Genre_utilisateur" />
+          <ScalarProperty Name="Tele_utilisateur" ColumnName="Tele_utilisateur" />
+          <ScalarProperty Name="Email_utilisateur" ColumnName="Email_utilisateur" />
+          <ScalarProperty Name="Mdp_utilisateur" ColumnName="Mdp_utilisateur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ARTISAN">
+      <EntityTypeMapping TypeName="MAALEM_BIN_IDIK_DBModel.ARTISAN">
+        <MappingFragment StoreEntitySet="ARTISAN">
+          <ScalarProperty Name="Artisan_Banni" ColumnName="Artisan_Banni" />
+          <ScalarProperty Name="Email_verifier" ColumnName="Email_verifier" />
+          <ScalarProperty Name="Mdp_artisan" ColumnName="Mdp_artisan" />
+          <ScalarProperty Name="Email_artisan" ColumnName="Email_artisan" />
+          <ScalarProperty Name="Tele_artisan" ColumnName="Tele_artisan" />
+          <ScalarProperty Name="Genre_artisan" ColumnName="Genre_artisan" />
+          <ScalarProperty Name="DateN_artisan" ColumnName="DateN_artisan" />
+          <ScalarProperty Name="Prenom_artisan" ColumnName="Prenom_artisan" />
+          <ScalarProperty Name="Nom_artisan" ColumnName="Nom_artisan" />
+          <ScalarProperty Name="ID_artisan" ColumnName="ID_artisan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="METIER">
+      <EntityTypeMapping TypeName="MAALEM_BIN_IDIK_DBModel.METIER">
+        <MappingFragment StoreEntitySet="METIER">
+          <ScalarProperty Name="Nom_metier" ColumnName="Nom_metier" />
+          <ScalarProperty Name="ID_metier" ColumnName="ID_metier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVICE">
+      <EntityTypeMapping TypeName="MAALEM_BIN_IDIK_DBModel.SERVICE">
+        <MappingFragment StoreEntitySet="SERVICE">
+          <ScalarProperty Name="Ville_service" ColumnName="Ville_service" />
+          <ScalarProperty Name="ID_artisan" ColumnName="ID_artisan" />
+          <ScalarProperty Name="ID_metier" ColumnName="ID_metier" />
+          <ScalarProperty Name="Description_service" ColumnName="Description_service" />
+          <ScalarProperty Name="Titre_service" ColumnName="Titre_service" />
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMMANDE_SERVICE">
+      <EntityTypeMapping TypeName="MAALEM_BIN_IDIK_DBModel.COMMANDE_SERVICE">
+        <MappingFragment StoreEntitySet="COMMANDE_SERVICE">
+          <ScalarProperty Name="Prix_service" ColumnName="Prix_service" />
+          <ScalarProperty Name="ID_utilisateur" ColumnName="ID_utilisateur" />
+          <ScalarProperty Name="ID_service" ColumnName="ID_service" />
+          <ScalarProperty Name="DateDePrise" ColumnName="DateDePrise" />
+          <ScalarProperty Name="ID_commande" ColumnName="ID_commande" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

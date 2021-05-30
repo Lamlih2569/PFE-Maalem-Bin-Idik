@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="118" viewBox="0 0 512 118">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1" data-name="Rectangle 1" width="512" height="118" transform="translate(412 309)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_de_masques_1" data-name="Groupe de masques 1" transform="translate(-412 -309)" clip-path="url(#clip-path)">
+    <g id="noun_dollar_3876456" transform="matrix(0.914, -0.407, 0.407, 0.914, 770.746, 385.143)">
+      <g id="Groupe_2" data-name="Groupe 2" transform="translate(81.975 11.8)">
+        <g id="Groupe_1" data-name="Groupe 1">
+          <path id="Tracé_1" data-name="Tracé 1" d="M57.52,88.21H45.16V79.37a44.383,44.383,0,0,1-19.41-8.21l-1.33-1.01,8.62-12.6,1.46,1.11a34.486,34.486,0,0,0,11.08,6.06V54.74c-9.67-2.78-18.31-7.25-18.31-19.47,0-9.73,6.81-16.65,17.89-18.32V11.8H57.52v5.37a37.139,37.139,0,0,1,15.1,6.36l1.3.92L66.49,37.43l-1.56-1.05a36.339,36.339,0,0,0-7.84-4.1v9.16c12.94,3.76,18.48,9.71,18.48,19.73,0,9.7-6.88,16.64-18.06,18.4v8.64Zm-8.86-3.5h5.36V76.46l1.56-.17c10.33-1.14,16.5-6.79,16.5-15.13,0-8.58-4.98-13.42-17.19-16.71L53.6,44.1V27.63l2.19.57a35.1,35.1,0,0,1,9.52,4.25l3.98-6.95a33.644,33.644,0,0,0-13.76-5.11l-1.5-.21V15.3H48.67v4.77l-1.57.16c-10.07,1.04-16.32,6.8-16.32,15.04,0,8.63,4.61,13.09,17.02,16.46l1.29.35V69.1l-2.1-.43c-4.41-.9-8.41-2.76-13.12-6.13l-4.66,6.81a41.358,41.358,0,0,0,17.92,6.78l1.53.2v8.38Zm4.94-15.3V52.94l2.36.87c5.11,1.89,7.19,4.22,7.19,8.03,0,2.29-.98,6.29-7.54,7.27Zm3.49-11.29v7.03c2.55-.94,2.55-2.61,2.55-3.32C59.64,60.53,59.42,59.38,57.09,58.12ZM49.08,43.13l-2.35-.85c-4.99-1.81-7.03-4.07-7.03-7.78,0-1.81.72-6.13,7.37-7.1l2-.29V43.13ZM45.59,31.36c-2.38.92-2.38,2.53-2.38,3.14,0,1.22.21,2.3,2.38,3.47Z" transform="translate(-24.42 -11.8)" fill="#dfdfdf"/>
+        </g>
+      </g>
+      <text id="Muhammad_Rizqi_Dwi_Prasetia_Muhyidin" data-name="Muhammad Rizqi Dwi Prasetia Muhyidin" transform="translate(0 184.847)" fill="#dfdfdf" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">Muhammad Rizqi Dwi Prasetia Muhyidin</tspan></text>
+      <text id="from_the_Noun_Project" data-name="from the Noun Project" transform="translate(0 188.847)" fill="#dfdfdf" font-size="4" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">from the Noun Project</tspan></text>
+    </g>
+  </g>
+</svg>
